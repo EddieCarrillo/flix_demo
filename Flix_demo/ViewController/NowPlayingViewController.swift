@@ -14,7 +14,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     let movieCellIdentifier = "MovieCell"
     
-    var movies: [[String: Any]]?
+    var movies: [[String: Any]] = []
     
     //Implicitly unwrapped optional
     var refreshControl: UIRefreshControl!
@@ -23,11 +23,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if movies == nil{
-            return 0
-        }else {
-            return movies!.count
-        }
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,12 +31,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
           let cell = tableview.dequeueReusableCell(withIdentifier: movieCellIdentifier, for: indexPath) as! MovieCell
         
         print("cell height: \(cell.contentView.frame.height)")
-        
-        guard let movies = self.movies else {
-            print("There are not loaded movies!")
-            return cell
-        }
-        
         
         cell.frame = CGRect(x: 0, y: 0, width: 50, height: 200)
         
@@ -120,11 +110,20 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! MovieCell
+        guard let indexPath =  tableview.indexPath(for: cell) else {
+            print("No indexPath!")
+            return
+        }
+        
+        
+        
+        let movie = self.movies[indexPath.row] as! [String: Any]
+        
+        let detailViewController = segue.destination as! DetailViewController
+        detailViewController.movie = movie
     }
-    
 
   
 

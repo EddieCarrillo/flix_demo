@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		829A9B36F448FA7774332CE4 /* Pods_Flix_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D99691543DA1AB0BFE093A /* Pods_Flix_demo.framework */; };
+		F70AE25F1FF55BB300EFC8C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AE25E1FF55BB300EFC8C6 /* DetailViewController.swift */; };
 		F7CC40D51FF440E000C5B8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */; };
 		F7CC40DA1FF440E000C5B8A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CC40D81FF440E000C5B8A3 /* Main.storyboard */; };
 		F7CC40DC1FF440E000C5B8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CC40DB1FF440E000C5B8A3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		16D99691543DA1AB0BFE093A /* Pods_Flix_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC1F79EDFBA225202DBC93E /* Pods-Flix_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix_demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flix_demo/Pods-Flix_demo.release.xcconfig"; sourceTree = "<group>"; };
 		D4D65908C606A0AF00F89D85 /* Pods-Flix_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flix_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flix_demo/Pods-Flix_demo.debug.xcconfig"; sourceTree = "<group>"; };
+		F70AE25E1FF55BB300EFC8C6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F7CC40D11FF440E000C5B8A3 /* Flix_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CC40D91FF440E000C5B8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,10 +63,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F7CC40C81FF440E000C5B8A3 = {
+		F70AE25C1FF55B7100EFC8C6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				F7CC40E81FF4482900C5B8A3 /* NowPlayingViewController.swift */,
+				F70AE25E1FF55BB300EFC8C6 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F70AE25D1FF55B8900EFC8C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F7CC40EA1FF4507400C5B8A3 /* MovieCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F7CC40C81FF440E000C5B8A3 = {
+			isa = PBXGroup;
+			children = (
 				F7CC40E61FF4423300C5B8A3 /* README.md */,
 				F7CC40D31FF440E000C5B8A3 /* Flix_demo */,
 				F7CC40D21FF440E000C5B8A3 /* Products */,
@@ -84,12 +102,13 @@
 		F7CC40D31FF440E000C5B8A3 /* Flix_demo */ = {
 			isa = PBXGroup;
 			children = (
+				F70AE25D1FF55B8900EFC8C6 /* Views */,
+				F70AE25C1FF55B7100EFC8C6 /* ViewController */,
 				F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */,
 				F7CC40D81FF440E000C5B8A3 /* Main.storyboard */,
 				F7CC40DB1FF440E000C5B8A3 /* Assets.xcassets */,
 				F7CC40DD1FF440E000C5B8A3 /* LaunchScreen.storyboard */,
 				F7CC40E01FF440E000C5B8A3 /* Info.plist */,
-				F7CC40EA1FF4507400C5B8A3 /* MovieCell.swift */,
 			);
 			path = Flix_demo;
 			sourceTree = "<group>";
@@ -229,6 +248,7 @@
 				F7CC40E91FF4482900C5B8A3 /* NowPlayingViewController.swift in Sources */,
 				F7CC40D51FF440E000C5B8A3 /* AppDelegate.swift in Sources */,
 				F7CC40EB1FF4507400C5B8A3 /* MovieCell.swift in Sources */,
+				F70AE25F1FF55BB300EFC8C6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
