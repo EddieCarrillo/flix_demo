@@ -47,3 +47,30 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
+    
+    
+    
+     
+    # Project 2 - *Ficker Extended*
+
+**Flicker Extended** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+
+Time spent: **1** hours spent in total
+
+## User Stories
+
+The following **required** functionality is completed:
+
+- [x] User can tap a cell to see a detail view (+5pts)
+- [x] User can tap a tab bar button to view a grid layout of Movie Posters using a CollectionView (+5pts)
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/ac3x8bP.gif' title='Flicker Walkthrough' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
