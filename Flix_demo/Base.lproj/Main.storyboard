@@ -47,8 +47,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so4-1b-anK">
-                                                    <rect key="frame" x="101" y="50" width="290" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so4-1b-anK">
+                                                    <rect key="frame" x="101" y="50" width="290" height="184"/>
                                                     <color key="backgroundColor" red="1" green="0.26965383581564384" blue="0.78465601270229179" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <string key="text">Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -66,7 +66,7 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="1QO-Aq-MMk" secondAttribute="bottom" constant="8" id="UYA-zJ-itv"/>
                                                 <constraint firstItem="so4-1b-anK" firstAttribute="top" secondItem="0Yy-wY-Np0" secondAttribute="bottom" constant="8" id="WaS-Ox-BWz"/>
                                                 <constraint firstItem="1QO-Aq-MMk" firstAttribute="top" secondItem="bKw-Cx-Wsf" secondAttribute="topMargin" constant="8" id="cnw-9P-7JQ"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="so4-1b-anK" secondAttribute="bottom" constant="8" id="qqg-Fd-1aM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="so4-1b-anK" secondAttribute="bottom" constant="8" id="fIU-7d-p49"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

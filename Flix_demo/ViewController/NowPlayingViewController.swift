@@ -1,4 +1,4 @@
-//
+    //
 //  NowPlayingViewController.swift
 //  Flix_demo
 //
