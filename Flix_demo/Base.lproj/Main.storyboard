@@ -6,7 +6,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -109,37 +111,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-QI-5J2">
-                                <rect key="frame" x="0.0" y="64" width="414" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-QI-5J2">
+                                <rect key="frame" x="0.0" y="64" width="414" height="184"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8v-OQ-k71">
-                                <rect key="frame" x="16" y="283" width="107" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v8v-OQ-k71">
+                                <rect key="frame" x="16" y="163" width="110" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="0OJ-4m-oxu"/>
+                                    <constraint firstAttribute="width" constant="110" id="bB0-5D-ciA"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE6-rc-Nwe">
-                                <rect key="frame" x="131" y="367" width="228" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QE6-rc-Nwe">
+                                <rect key="frame" x="134" y="256" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwt-aS-ww0">
-                                <rect key="frame" x="131" y="396" width="101" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwt-aS-ww0">
+                                <rect key="frame" x="134" y="285" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overview label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIm-q3-FfL">
-                                <rect key="frame" x="16" y="456" width="343" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIm-q3-FfL">
+                                <rect key="frame" x="8" y="341" width="398" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v8v-OQ-k71" firstAttribute="leading" secondItem="k0Y-J9-Oe2" secondAttribute="leading" constant="16" id="6RX-oN-6T9"/>
+                            <constraint firstItem="VIm-q3-FfL" firstAttribute="leading" secondItem="k0Y-J9-Oe2" secondAttribute="leading" constant="8" id="DW0-ie-D79"/>
+                            <constraint firstItem="VIm-q3-FfL" firstAttribute="top" secondItem="v8v-OQ-k71" secondAttribute="bottom" constant="8" id="ERE-TX-WZc"/>
+                            <constraint firstItem="k0Y-J9-Oe2" firstAttribute="trailing" secondItem="QE6-rc-Nwe" secondAttribute="trailing" constant="8" id="Eml-A2-6e5"/>
+                            <constraint firstItem="ROa-QI-5J2" firstAttribute="top" secondItem="k0Y-J9-Oe2" secondAttribute="top" id="GhZ-nd-Iih"/>
+                            <constraint firstItem="ROa-QI-5J2" firstAttribute="height" secondItem="pFC-8F-YHZ" secondAttribute="height" multiplier="0.25" id="Ig6-HS-8Z1"/>
+                            <constraint firstItem="k0Y-J9-Oe2" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VIm-q3-FfL" secondAttribute="bottom" constant="8" id="Ju4-rR-AZV"/>
+                            <constraint firstItem="QE6-rc-Nwe" firstAttribute="leading" secondItem="v8v-OQ-k71" secondAttribute="trailing" constant="8" id="Lca-3m-Azq"/>
+                            <constraint firstItem="QE6-rc-Nwe" firstAttribute="top" secondItem="ROa-QI-5J2" secondAttribute="bottom" constant="8" id="MwA-Ck-Rf9"/>
+                            <constraint firstItem="k0Y-J9-Oe2" firstAttribute="trailing" secondItem="VIm-q3-FfL" secondAttribute="trailing" constant="8" id="S9f-Ku-YCV"/>
+                            <constraint firstItem="ROa-QI-5J2" firstAttribute="trailing" secondItem="k0Y-J9-Oe2" secondAttribute="trailing" id="Xjl-C3-1hb"/>
+                            <constraint firstItem="ROa-QI-5J2" firstAttribute="leading" secondItem="k0Y-J9-Oe2" secondAttribute="leading" id="bIO-0L-bAg"/>
+                            <constraint firstItem="v8v-OQ-k71" firstAttribute="centerY" secondItem="ROa-QI-5J2" secondAttribute="bottom" id="cfe-Ai-DXJ"/>
+                            <constraint firstItem="Pwt-aS-ww0" firstAttribute="leading" secondItem="v8v-OQ-k71" secondAttribute="trailing" constant="8" id="fDl-jS-Fdp"/>
+                            <constraint firstItem="Pwt-aS-ww0" firstAttribute="top" secondItem="QE6-rc-Nwe" secondAttribute="bottom" constant="8" id="oJR-yf-GXF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="k0Y-J9-Oe2"/>
                     </view>
                     <connections>
