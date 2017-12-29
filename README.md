@@ -31,6 +31,29 @@ Here's a walkthrough of implemented user stories:
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
+# Lab 3 - *Dynamic Layout Flicks*
+
+**Auto Flicks** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+
+Time spent: **1** hours spent in total
+
+## User Stories
+
+The following **required** user stories are complete:
+
+- The following screens use AutoLayout to adapt to various orientations and screen sizes
+- [x] Movie feed view (+3pt)
+- [x] Detail view (+2pt)
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 
 ## License
 

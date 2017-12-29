@@ -27,7 +27,7 @@ class SuperHeroViewController: UIViewController, UICollectionViewDataSource {
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         
-        let cellsPerLine = 4
+        let cellsPerLine = 2
         let interItemSpacingTotal = layout.minimumInteritemSpacing * CGFloat((cellsPerLine - 1))
 
         let width = (collectionView.frame.size.width - interItemSpacingTotal) / CGFloat(cellsPerLine)
