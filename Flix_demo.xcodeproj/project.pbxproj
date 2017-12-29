@@ -11,6 +11,7 @@
 		F70AE25F1FF55BB300EFC8C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AE25E1FF55BB300EFC8C6 /* DetailViewController.swift */; };
 		F70AE2611FF5631C00EFC8C6 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AE2601FF5631C00EFC8C6 /* PosterCell.swift */; };
 		F70AE2631FF5635A00EFC8C6 /* SuperHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AE2621FF5635A00EFC8C6 /* SuperHeroViewController.swift */; };
+		F784942D1FF704C30072511B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F784942C1FF704C30072511B /* Movie.swift */; };
 		F7CC40D51FF440E000C5B8A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */; };
 		F7CC40DA1FF440E000C5B8A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CC40D81FF440E000C5B8A3 /* Main.storyboard */; };
 		F7CC40DC1FF440E000C5B8A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CC40DB1FF440E000C5B8A3 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		F70AE25E1FF55BB300EFC8C6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F70AE2601FF5631C00EFC8C6 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		F70AE2621FF5635A00EFC8C6 /* SuperHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroViewController.swift; sourceTree = "<group>"; };
+		F784942C1FF704C30072511B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F7CC40D11FF440E000C5B8A3 /* Flix_demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flix_demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7CC40D91FF440E000C5B8A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F784942E1FF704CD0072511B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F784942C1FF704C30072511B /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F7CC40C81FF440E000C5B8A3 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		F7CC40D31FF440E000C5B8A3 /* Flix_demo */ = {
 			isa = PBXGroup;
 			children = (
+				F784942E1FF704CD0072511B /* Model */,
 				F70AE25D1FF55B8900EFC8C6 /* Views */,
 				F70AE25C1FF55B7100EFC8C6 /* ViewController */,
 				F7CC40D41FF440E000C5B8A3 /* AppDelegate.swift */,
@@ -251,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F784942D1FF704C30072511B /* Movie.swift in Sources */,
 				F70AE2631FF5635A00EFC8C6 /* SuperHeroViewController.swift in Sources */,
 				F7CC40E91FF4482900C5B8A3 /* NowPlayingViewController.swift in Sources */,
 				F70AE2611FF5631C00EFC8C6 /* PosterCell.swift in Sources */,
