@@ -65,38 +65,14 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     
     func refreshData(){
-        guard let url =  URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(NowPlayingViewController.apiKey)") else {
-            print("Could not load the URL")
-            return
-        }
-        
-        let request = URLRequest(url: url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 10)
-        
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
-        
-        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?    ) in
-            self.refreshControl.endRefreshing()
-            self.activityIndicator.stopAnimating()
-            
-            //This will run when the network request returns
-            if let error = error{
-                print("[ERROR] \(error.localizedDescription)")
-            }else if let data = data {
-                
-                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-               
-                let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
-               
-                self.movies = Movie.getMovies(from: movieDictionaries)
-                
-                self.tableview.reloadData()
-                
+        MovieAPIManager().nowPlayingMovies { (movies: [Movie]?, error: Error?) in
+            if let error = error {
+                print("Could not refresh data.")
+            }else if let movies = movies {
+                self.movies = movies
+                self.tableview.reloadData().
             }
-            
         }
-        
-        task.resume()
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
