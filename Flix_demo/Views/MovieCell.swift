@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class MovieCell: UITableViewCell {
 
@@ -17,6 +18,15 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var overviewLabel: UILabel!
+    
+    var movie: Movie!{
+        didSet{
+            self.posterImageview.af_setImage(withURL: movie.posterURL!)
+            self.titleLabel.text = movie.title
+            self.overviewLabel.text = movie.overview
+        }
+        
+    }
     
     
     

@@ -10,13 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    enum MovieKeys {
-        static let title = "title"
-        static let releaseDate = "release_date"
-        static let overview = "overview"
-        static let backdropPath = "backdrop_path"
-        static let posterPath = "poster_path"
-    }
+    
 
     
     @IBOutlet weak var backdropImageView: UIImageView!
@@ -32,26 +26,18 @@ class DetailViewController: UIViewController {
     
     
     
-    var movie: [String: Any]?
+    var movie: Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let movie = self.movie {
-            self.titleLabel.text = movie[MovieKeys.title] as? String
-            self.releaseDateLabel.text = movie[MovieKeys.releaseDate] as? String
-            self.overviewLabel.text = movie[MovieKeys.overview] as? String
-            let backdropPathString = movie[MovieKeys.backdropPath] as! String
-            let posterPathString = movie[MovieKeys.posterPath] as! String
+            self.titleLabel.text = movie.title
+            self.releaseDateLabel.text = "12/3/2013"
+            self.backdropImageView.af_setImage(withURL: movie.backdropURL!)
+            self.posterImageView.af_setImage(withURL: movie.posterURL!)
+            self.overviewLabel.text = movie.overview
             
-            let baseUrlString  = "https://image.tmdb.org/t/p/w500"
-            
-            
-            let backdropURL = URL(string: "\(baseUrlString)\(backdropPathString)")
-            self.backdropImageView.af_setImage(withURL: backdropURL!)
-            
-            let posterPathURL = URL(string: "\(baseUrlString)\(posterPathString)")
-            self.posterImageView.af_setImage(withURL: posterPathURL!)
             
             
             

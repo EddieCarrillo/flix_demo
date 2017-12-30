@@ -14,7 +14,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     let movieCellIdentifier = "MovieCell"
     
-    var movies: [[String: Any]] = []
+    var movies: [Movie] = []
     
     //Implicitly unwrapped optional
     var refreshControl: UIRefreshControl!
@@ -34,21 +34,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         cell.frame = CGRect(x: 0, y: 0, width: 50, height: 200)
         
-        let movie = movies[indexPath.row] as! [String: Any]
-        
-        let title = movie["title"] as! String
-        let overview = movie["overview"] as! String
-        let posterPathString = movie["poster_path"] as! String
-        
-        let urlString =  "https://image.tmdb.org/t/p/w500\(posterPathString)"
-        
-        let posterUrl = URL(string: urlString)!
-        
-        cell.posterImageview.af_setImage(withURL: posterUrl)
-        
-        cell.titleLabel.text = title
-        cell.overviewLabel.text = overview
-        //cell.posterImageview.U
+        let movie = movies[indexPath.row]
+        cell.movie = movie
         return cell
     }
     
@@ -87,7 +74,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: OperationQueue.main)
         
-        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?    ) in
             self.refreshControl.endRefreshing()
             self.activityIndicator.stopAnimating()
             
@@ -97,9 +84,11 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             }else if let data = data {
                 
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+               
+                let movieDictionaries = dataDictionary["results"] as! [[String: Any]]
+               
+                self.movies = Movie.getMovies(from: movieDictionaries)
                 
-                let movies = dataDictionary["results"] as! [[String: Any]]
-                self.movies = movies
                 self.tableview.reloadData()
                 
             }
@@ -117,9 +106,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             return
         }
         
-        
-        
-        let movie = self.movies[indexPath.row] as! [String: Any]
+        let movie = self.movies[indexPath.row]
         
         let detailViewController = segue.destination as! DetailViewController
         detailViewController.movie = movie
