@@ -70,7 +70,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
                 print("Could not refresh data.")
             }else if let movies = movies {
                 self.movies = movies
-                self.tableview.reloadData().
+                self.tableview.reloadData()
             }
         }
     }
